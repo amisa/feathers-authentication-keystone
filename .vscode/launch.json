@@ -5,7 +5,7 @@
       "type": "node",
       "request": "launch",
       "env": {
-        "DEBUG": "feathers-authentication-keystone,feathers-authentication-keystone:verify",
+        "DEBUG": "feathers-authentication-keystone*",
         "NODE_TLS_REJECT_UNAUTHORIZED": "0"
       },
       "preLaunchTask": "compile",

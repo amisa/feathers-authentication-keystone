@@ -9,11 +9,9 @@ const auth = require('feathers-authentication');
 const jwt = require('feathers-authentication-jwt');
 const keystone = require('../lib/index');
 
-
-function printUserPayload() {
+function printUserPayload () {
   return function (hook) {
-
-    console.log('Received payload: ', hook.params.payload.user)
+    console.log('Received payload: ', hook.params.payload.user);
     return Promise.resolve(hook);
   };
 }
@@ -42,7 +40,7 @@ app.configure(rest())
 app.service('authentication').hooks({
   before: {
     // The credentials should be taken from the request.
-    create: [auth.hooks.authenticate('keystone')],
+    create: [auth.hooks.authenticate('keystone')]
   }
 });
 

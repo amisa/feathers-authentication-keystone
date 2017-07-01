@@ -27,7 +27,7 @@ Please refer to the [feathers-authentication-keystone documentation](http://docs
     entity: 'user', // the entity that will be added to the request, socket, and hook.params. (ie. req.user, socket.user, hook.params.user)
     service: 'users', // the service to look up the entity
     passReqToCallback: true, // whether the request object should be passed to `verify`
-    authUrl: 'http://<address>:<port>', // keystone endpoint
+    authUrl: 'http://<address>:<port>', // keystone endpoint with configured v3 authentication
     usernameField: 'username', // key name of username field
     passwordField: 'password', // key name of password field
     Verifier: Verifier, // A Verifier class. Defaults to the built-in one but can be a custom one. See below for details.
@@ -36,7 +36,7 @@ Please refer to the [feathers-authentication-keystone documentation](http://docs
 
 ### Verifier
 
-This is the verification class that receives the JWT payload (if verification is successful) and either returns the payload or, if an `id` is present in the payload, populates the entity (normally a `user`) and returns both the entity and the payload. It has the following methods that can all be overridden. The `verify` function has the exact same signature as [passport-jwt](https://github.com/themikenicholson/passport-jwt).
+This is the verification class that receives the users identity (if verification is successful), populates the entity (normally a user) and returns both the entity and the payload. It has the following methods that can all be overridden.
 
 ```js
 {

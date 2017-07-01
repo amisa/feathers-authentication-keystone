@@ -1,6 +1,5 @@
 const feathers = require('feathers');
 const rest = require('feathers-rest');
-const socketio = require('feathers-socketio');
 const hooks = require('feathers-hooks');
 const memory = require('feathers-memory');
 const bodyParser = require('body-parser');
@@ -20,7 +19,6 @@ function printUserPayload () {
 const app = feathers();
 
 app.configure(rest())
-  .configure(socketio())
   .configure(hooks())
   // Needed for parsing bodies (login).
   .use(bodyParser.json())

@@ -74,7 +74,6 @@ Here's an example of a Feathers server that uses `feathers-authentication-keysto
 ```js
 const feathers = require('feathers');
 const rest = require('feathers-rest');
-const socketio = require('feathers-socketio');
 const hooks = require('feathers-hooks');
 const memory = require('feathers-memory');
 const bodyParser = require('body-parser');
@@ -87,7 +86,6 @@ const keystone = require('../lib/index');
 const app = feathers();
 
 app.configure(rest())
-  .configure(socketio())
   .configure(hooks())
   // Needed for parsing bodies (login).
   .use(bodyParser.json())

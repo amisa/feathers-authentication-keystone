@@ -2,7 +2,7 @@
   "name": "feathers-authentication-keystone",
   "description": "Keystone authentication strategy for feathers-authentication using Passport",
   "version": "0.0.0",
-  "homepage": "https://github.com/feathersjs/feathers-authentication-keystone",
+  "homepage": "https://github.com/virtuozzo/feathers-authentication-keystone",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -11,16 +11,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feathersjs/feathers-authentication-keystone.git"
+    "url": "git://github.com/virtuozzo/feathers-authentication-keystone.git"
   },
   "author": {
     "name": "Feathers contributors",
-    "email": "hello@feathersjs.com",
-    "url": "https://feathersjs.com"
+    "email": "alkurbatov@virtuozzo.com",
+    "url": "https://virtuozzo.com"
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-authentication-keystone/issues"
+    "url": "https://github.com/virtuozzo/feathers-authentication-keystone/issues"
   },
   "engines": {
     "node": ">= 4.6.0"

@@ -1,9 +1,9 @@
 # feathers-authentication-keystone
 
-[![Build Status](https://travis-ci.org/feathersjs/feathers-authentication-keystone.png?branch=master)](https://travis-ci.org/feathersjs/feathers-authentication-keystone)
-[![Code Climate](https://codeclimate.com/github/feathersjs/feathers-authentication-keystone/badges/gpa.svg)](https://codeclimate.com/github/feathersjs/feathers-authentication-keystone)
-[![Test Coverage](https://codeclimate.com/github/feathersjs/feathers-authentication-keystone/badges/coverage.svg)](https://codeclimate.com/github/feathersjs/feathers-authentication-keystone/coverage)
-[![Dependency Status](https://img.shields.io/david/feathersjs/feathers-authentication-keystone.svg?style=flat-square)](https://david-dm.org/feathersjs/feathers-authentication-keystone)
+[![Build Status](https://travis-ci.org/virtuozzo/feathers-authentication-keystone.png?branch=master)](https://travis-ci.org/virtuozzo/feathers-authentication-keystone)
+[![Code Climate](https://codeclimate.com/github/virtuozzo/feathers-authentication-keystone/badges/gpa.svg)](https://codeclimate.com/github/virtuozzo/feathers-authentication-keystone)
+[![Test Coverage](https://codeclimate.com/github/virtuozzo/feathers-authentication-keystone/badges/coverage.svg)](https://codeclimate.com/github/virtuozzo/feathers-authentication-keystone/coverage)
+[![Dependency Status](https://img.shields.io/david/virtuozzo/feathers-authentication-keystone.svg?style=flat-square)](https://david-dm.org/virtuozzo/feathers-authentication-keystone)
 [![Download Status](https://img.shields.io/npm/dm/feathers-authentication-keystone.svg?style=flat-square)](https://www.npmjs.com/package/feathers-authentication-keystone)
 
 > Keystone authentication strategy for feathers-authentication using Passport

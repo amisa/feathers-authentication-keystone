@@ -1,8 +1,5 @@
 ### Summary
 
-(If you have not already please refer to the contributing guideline as [described
-here](https://github.com/feathersjs/feathers/blob/master/.github/contributing.md#pull-requests))
-
 - [ ] Tell us about the problem your pull request is solving.
 - [ ] Are there any open issues that are related to this?
 - [ ] Is this PR dependent on PRs in other repos?
@@ -19,4 +16,3 @@ Your PR will be reviewed by a core team member and they will work with you to ge
 
 If your changes involve documentation updates please mention that and link the appropriate PR in [feathers-docs](https://github.com/feathersjs/feathers-docs).
 
-Thanks for contributing to Feathers! :heart:

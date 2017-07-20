@@ -61,7 +61,15 @@ Strategy.prototype.authenticate = function (req, options) {
 
   keystone.getToken(username, password, function (err, token) {
     if (err) {
-      return self.fail(err);
+      if (err.errno === 'EHOSTUNREACH') {
+        return self.fail({message: 'Unable to connect to keystone at ' + err.address + ':' + err.port}, 401)
+      }
+
+      if (err.detail && (err.detail.remoteStatusCode === 401)) {
+        return self.fail({ message: 'Invalid username or password' }, 401)
+      } else {
+        return self.fail(err);
+      }
     }
 
     if (self._passReqToCallback) {

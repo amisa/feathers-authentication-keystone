@@ -14,11 +14,16 @@
     "url": "git://github.com/virtuozzo/feathers-authentication-keystone.git"
   },
   "author": {
-    "name": "Feathers contributors",
+    "name": "Alexander Kurbatov",
     "email": "alkurbatov@virtuozzo.com",
     "url": "https://virtuozzo.com"
   },
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Inga Pyass",
+      "email": "ipyass@virtuozzo.com"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/virtuozzo/feathers-authentication-keystone/issues"
   },

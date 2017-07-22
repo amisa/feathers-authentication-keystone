@@ -1,15 +1,14 @@
-import makeDebug from 'debug';
-import merge from 'lodash.merge';
-import omit from 'lodash.omit';
-import pick from 'lodash.pick';
-import DefaultVerifier from './verifier';
-import { Strategy as KeystoneStrategy } from './passport';
+const debug = require('debug')('feathers-authentication-keystone');
+const merge = require('lodash.merge');
+const omit = require('lodash.omit');
+const pick = require('lodash.pick');
+const DefaultVerifier = require('./verifier');
+const { Strategy } = require('./passport');
 
-const debug = makeDebug('feathers-authentication-keystone');
 const defaults = {
   name: 'keystone',
   usernameField: 'username',
-  passwordField: 'password',
+  passwordField: 'password'
 };
 
 const INCLUDE_KEYS = [
@@ -18,12 +17,11 @@ const INCLUDE_KEYS = [
   'entity',
   'usernameField',
   'passwordField',
-  'passReqToCallback',
+  'passReqToCallback'
 ];
 
-
-export default function init (options = {}) {
-  return function keystoneAuth() {
+const init = function init (options = {}) {
+  return function keystoneAuth () {
     const app = this;
     const _super = app.setup;
 
@@ -58,17 +56,15 @@ export default function init (options = {}) {
 
       debug('Registering keystone authentication strategy with options:', keystoneSettings);
       app.passport.use(keystoneSettings.name,
-        new KeystoneStrategy(keystoneSettings, verifier.verify.bind(verifier))
+        new Strategy(keystoneSettings, verifier.verify.bind(verifier))
       );
       app.passport.options(keystoneSettings.name, keystoneSettings);
 
       return result;
     };
   };
-}
+};
 
-// Exposed Modules
-Object.assign(init, {
-  defaults,
-  Verifier: DefaultVerifier,
-});
+init.Verifier = DefaultVerifier;
+
+module.exports = init;

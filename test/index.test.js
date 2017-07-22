@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import plugin from '../src';
+const { expect } = require('chai');
+const plugin = require('../src');
 
 describe('feathers-authentication-keystone', () => {
   it('is CommonJS compatible', () => {

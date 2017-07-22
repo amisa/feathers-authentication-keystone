@@ -1,10 +1,7 @@
-import Debug from 'debug';
+const debug = require('debug')('feathers-authentication-keystone:verify');
 
-const debug = Debug('feathers-authentication-keystone:verify');
-
-
-class KeystoneVerifier {
-  constructor(app, options = {}) {
+module.exports = class KeystoneVerifier {
+  constructor (app, options = {}) {
     this.app = app;
     this.options = options;
 
@@ -17,22 +14,20 @@ class KeystoneVerifier {
     this.verify = this.verify.bind(this);
   }
 
-  verify(req, identity, done) {
+  verify (req, identity, done) {
     debug('Received Keystone identity:', identity);
 
     let user = {
       id: identity.user.id,
       username: identity.user.name,
       token: identity.token,
-      expires_at: identity.expires_at,
+      expires_at: identity.expires_at
     };
 
     const payload = {
-      [`${this.options.entity}Id`]: identity.user.id,
+      [`${this.options.entity}Id`]: identity.user.id
     };
 
     return done(null, user, payload);
   }
-}
-
-export default KeystoneVerifier;
+};

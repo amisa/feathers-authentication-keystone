@@ -8,6 +8,5 @@ describe('feathers-authentication-keystone', () => {
 
   it('basic functionality', () => {
     expect(typeof plugin).to.equal('function', 'It worked');
-    expect(plugin()).to.equal('feathers-authentication-keystone');
   });
 });

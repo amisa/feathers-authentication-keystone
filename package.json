@@ -56,11 +56,11 @@
   },
   "dependencies": {
     "debug": "^2.6.8",
-    "feathers-errors": "^2.8.1",
+    "feathers-errors": "^2.9.1",
     "lodash.merge": "^4.6.0",
     "lodash.omit": "^4.5.0",
     "lodash.pick": "^4.4.0",
-    "openstack-wrapper": "^2.1.1",
+    "openstack-wrapper": "github:virtuozzo/node-openstack-wrapper",
     "passport-strategy": "^1.0.0"
   },
   "devDependencies": {

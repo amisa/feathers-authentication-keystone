@@ -61,7 +61,7 @@ Strategy.prototype.authenticate = function (req, options) {
 
   keystone.getToken(username, password, function (err, token) {
     if (err) {
-      if (err.errno === 'EHOSTUNREACH') {
+      if (err.errno === 'EHOSTUNREACH' || err.errno === 'ECONNREFUSED') {
         return self.fail({message: 'Unable to connect to keystone at ' + err.address + ':' + err.port}, 401);
       }
 
